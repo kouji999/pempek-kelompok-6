@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pempek Kelompok 6 — Projek PKK. Mengolah warisan kuliner Palembang bersama-sama, dari ikan segar hingga pengemasan rapi." />
+  <title>Pempek Kelompok 6 — Projek PKK</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#beranda" style="position:absolute;left:-9999px;top:0;background:var(--brown);color:var(--cream);padding:0.8rem 1.2rem;z-index:200;border-radius:0 0 8px 0;">
+    Lewati ke konten utama
+  </a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#beranda" class="brand" aria-label="Pempek Kelompok 6 — kembali ke beranda">
+        <span class="brand__mark" aria-hidden="true">P6</span>
+        <span class="brand__name">Kelompok 6</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigasi utama">
+        <ul class="nav__list" id="navList"></ul>
+      </nav>
+
+      <button
+        class="nav__toggle"
+        id="navToggle"
+        type="button"
+        aria-label="Buka menu navigasi"
+        aria-expanded="false"
+        aria-controls="navList"
+      >
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+        <span class="nav__toggle-line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="beranda">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero__grid">
+        <div class="hero__content" id="heroContent">
+          <!-- filled by script -->
+        </div>
+        <div class="hero__visual reveal reveal--zoom" data-delay="2">
+          <div class="hero__frame" role="img" aria-label="Ilustrasi tempat untuk foto produk pempek">
+            <p class="hero__frame-text">
+              Foto Produk
+              <span class="hero__frame-sub">Tempat ilustrasi pempek</span>
+            </p>
+          </div>
+          <span class="hero__badge hero__badge--top">Produk Kelompok</span>
+          <span class="hero__badge hero__badge--bottom">Khas Palembang</span>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Gulir</span>
+        <span class="scroll-indicator__line"></span>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCT ===================== -->
+    <section class="section" id="produk" aria-labelledby="productTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Produk Kami</p>
+          <h2 class="section-title" id="productTitle">Sajian Khas Palembang</h2>
+          <p class="section-subtitle">
+            Pempek dibuat dari ikan tenggiri pilihan, dicampur tepung sagu, dibentuk,
+            dan direbus hingga teksturnya kenyal. Disajikan dengan cuko khas yang pedas-manis.
+          </p>
+        </div>
+
+        <div id="productContainer"></div>
+      </div>
+    </section>
+
+    <!-- ===================== VALUE PROPOSITIONS ===================== -->
+    <section class="section section--alt" id="nilai" aria-labelledby="valueTitle">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Mengapa Memilih Kami</p>
+          <h2 class="section-title" id="valueTitle">Nilai yang Kami Jaga</h2>
+        </div>
+        <div class="value-grid" id="valueGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== JOURNEY ===================== -->
+    <section class="section" id="perjalanan" aria-labelledby="journeyTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Perjalanan Kelompok</p>
+          <h2 class="section-title" id="journeyTitle">Dari Ide ke Produk Siap Jual</h2>
+          <p class="section-subtitle">
+            Tahapan yang kami lalui bersama, dari pembentukan kelompok hingga pemasaran.
+          </p>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section section--alt" id="proses" aria-labelledby="processTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Proses Produksi</p>
+          <h2 class="section-title" id="processTitle">Langkah Demi Langkah</h2>
+          <p class="section-subtitle">
+            Dari ikan segar hingga pempek siap saji, setiap tahap kami kerjakan dengan teliti.
+          </p>
+        </div>
+
+        <div class="process-grid" id="processGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROGRESS ===================== -->
+    <section class="section" id="produksi" aria-labelledby="progressTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kemajuan Produksi</p>
+          <h2 class="section-title" id="progressTitle">Pantauan Produksi Kami</h2>
+          <p class="section-subtitle">
+            Target dan realisasi produksi kelompok yang diperbarui seiring berjalannya proyek.
+          </p>
+        </div>
+
+        <div class="dashboard reveal">
+          <div class="dashboard__panel">
+            <div class="metric-grid" id="progressMetrics"></div>
+            <div class="progress-wrap" id="progressWrap"></div>
+            <p class="dashboard__note">
+              Angka aktual akan diisi setelah seluruh batch produksi selesai dihitung.
+            </p>
+          </div>
+          <aside class="dashboard__aside">
+            <div class="note-card">
+              <h3 class="note-card__title">Catatan Produksi</h3>
+              <p class="note-card__text">
+                Setiap batch dicatat rapi agar target dan realisasi dapat dibandingkan
+                dengan mudah. Kemajuan di atas menggunakan placeholder hingga data final
+                tersedia.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUALITY ===================== -->
+    <section class="section section--alt" id="kualitas" aria-labelledby="qualityTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Pemeriksaan Kualitas</p>
+          <h2 class="section-title" id="qualityTitle">Daftar Periksa Kami</h2>
+          <p class="section-subtitle">
+            Standar yang kami gunakan sebelum produk dinyatakan layak jual.
+          </p>
+        </div>
+
+        <div class="checklist" id="checklist"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PACKAGING ===================== -->
+    <section class="section" id="kemasan" aria-labelledby="packagingTitle">
+      <div class="container packaging__grid">
+        <div class="reveal reveal--left">
+          <p class="eyebrow">Pengemasan</p>
+          <h2 class="section-title" id="packagingTitle">Kemasan yang Menjaga Kualitas</h2>
+          <p class="packaging__desc">
+            Pempek dikemas dalam wadah bersih dan diberi label berisi nama produk, tanggal
+            produksi, dan informasi kelompok. Kemasan dirancang agar pempek tetap terjaga
+            kualitasnya dan mudah dibawa.
+          </p>
+          <div class="packaging__features" id="packagingFeatures"></div>
+        </div>
+
+        <div class="packaging__visual reveal reveal--right" role="img" aria-label="Ilustrasi kemasan pempek">
+          <div class="packaging__visual-inner">
+            Pempek<br />Kelompok 6
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MARKETING ===================== -->
+    <section class="section section--alt" id="pemasaran" aria-labelledby="marketingTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Strategi Pemasaran</p>
+          <h2 class="section-title" id="marketingTitle">Mengenalkan Pempek Kami</h2>
+          <p class="section-subtitle">
+            Cara kami memperkenalkan pempek kepada calon pembeli.
+          </p>
+        </div>
+
+        <div class="marketing__grid" id="marketingGrid"></div>
+
+        <div class="section-head section-head--center reveal" style="margin-bottom:2rem;">
+          <h3 class="section-title" style="font-size:clamp(1.5rem,3.5vw,2rem);">Alur Penjualan</h3>
+        </div>
+        <div class="funnel" id="funnel"></div>
+      </div>
+    </section>
+
+    <!-- ===================== SALES ===================== -->
+    <section class="section" id="penjualan" aria-labelledby="salesTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kinerja Penjualan</p>
+          <h2 class="section-title" id="salesTitle">Rekap Penjualan Kami</h2>
+          <p class="section-subtitle">
+            Ringkasan hasil penjualan per periode pemasaran.
+          </p>
+        </div>
+
+        <div class="sales__metrics" id="salesMetrics"></div>
+
+        <div class="bar-chart reveal">
+          <h3 class="bar-chart__title">Penjualan per Periode</h3>
+          <p class="bar-chart__unit">Satuan: buah</p>
+          <div class="bar-chart__plot" id="barChart" role="img" aria-label="Grafik batang penjualan per periode"></div>
+          <p class="sales__note">
+            Nilai aktual diisi setelah seluruh periode penjualan selesai.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINANCIAL ===================== -->
+    <section class="section section--alt" id="keuangan" aria-labelledby="financialTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Rincian Keuangan</p>
+          <h2 class="section-title" id="financialTitle">Biaya, Pendapatan, dan Laba</h2>
+          <p class="section-subtitle">
+            Ringkasan keuangan proyek dengan angka placeholder yang siap diisi data aktual.
+          </p>
+        </div>
+
+        <div class="financial__grid">
+          <div class="fin-panel reveal">
+            <h3 class="fin-panel__title">Pengeluaran</h3>
+            <table class="fin-table">
+              <thead>
+                <tr>
+                  <th scope="col">Kategori</th>
+                  <th scope="col">Jenis</th>
+                  <th scope="col">Nominal</th>
+                </tr>
+              </thead>
+              <tbody id="finExpenses"></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card reveal" id="finSummary"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INSIGHT ===================== -->
+    <section class="section" id="wawasan" aria-labelledby="insightTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Wawasan Bisnis</p>
+          <h2 class="section-title" id="insightTitle">Pelajaran dari Proyek Ini</h2>
+          <p class="section-subtitle">
+            Hal yang kami pelajari dari proses produksi dan penjualan pempek.
+          </p>
+        </div>
+
+        <div class="insight-grid" id="insightGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== TEAM ===================== -->
+    <section class="section section--alt" id="tim" aria-labelledby="teamTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Tim Kami</p>
+          <h2 class="section-title" id="teamTitle">Lima Anggota, Satu Tujuan</h2>
+          <p class="section-subtitle">
+            Anggota yang mengerjakan proyek ini bersama-sama.
+          </p>
+        </div>
+
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== EVALUATION ===================== -->
+    <section class="section" id="evaluasi" aria-labelledby="evaluationTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Evaluasi Proyek</p>
+          <h2 class="section-title" id="evaluationTitle">Apa yang Kami Pelajari</h2>
+          <p class="section-subtitle">
+            Apa yang berjalan baik, apa yang perlu diperbaiki, dan pelajaran untuk ke depan.
+          </p>
+        </div>
+
+        <div class="eval-grid" id="evalGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section cta" aria-labelledby="ctaTitle">
+      <div class="container cta__inner">
+        <h2 class="cta__title reveal" id="ctaTitle">Siap Mencoba Pempek Kami?</h2>
+        <p class="cta__sub reveal" data-delay="1">
+          Pesan pempek buatan Kelompok 6 dan rasakan sendiri cita rasanya.
+        </p>
+        <a class="btn btn--primary reveal" data-delay="2" href="#tim">Hubungi Kami</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__brand-name">Pempek Kelompok 6</p>
+          <p class="footer__brand-desc">
+            Projek PKK — Mengolah warisan kuliner Palembang bersama-sama.
+          </p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navigasi footer">
+          <div class="footer__nav-col" id="footerNavA"></div>
+          <div class="footer__nav-col" id="footerNavB"></div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom" id="footerBottom"></div>
+    </div>
+  </footer>
+
+  <a class="back-top" id="backTop" href="#beranda" aria-label="Kembali ke atas">↑</a>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
